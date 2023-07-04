@@ -24,16 +24,16 @@ public class Dog extends Animal implements LandAble{
     @Override
     public void sayHello()
     {
-        System.out.println("wagging their tails");     
+        System.out.println("wagging their tails");  
+        sayHello(this.mood);
     }
     
     @Override
-    public void sayHello(int mood)
+    protected void sayHello(int mood)
     {
-        if(this.mood == Dog.moodHappy)
+        if(this.mood == Dog.MOODHAPPY)
             System.out.println("they will bark loudly");
         else
-            if(this.mood == Dog.moodScare)
-                System.out.println("they will make a whooping sound");
+           System.out.println("they will make a whooping sound");
     }
 }

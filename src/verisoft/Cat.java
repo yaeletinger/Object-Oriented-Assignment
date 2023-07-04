@@ -24,17 +24,17 @@ public class Cat extends Animal implements LandAble{
     @Override
     public void sayHello()
     {
-        System.out.println("make a \"meow~\" sound");     
+        System.out.println("make a \"meow~\" sound");
+        sayHello(this.mood);
     }
     
     @Override
     public void sayHello(int mood)
     {
-        if(this.mood == Cat.moodHappy)
+        if(this.mood == Cat.MOODHAPPY)
             System.out.println("they make a \"purr, purr\" sound");
         else
-            if(this.mood == Cat.moodScare)
-                System.out.println("they make a \"hiss\" sound");
+            System.out.println("they make a \"hiss\" sound");
     }
     
 }

@@ -32,13 +32,17 @@ public class Frog extends Animal implements LandAble, WaterAble{
     }
     
     @Override
+    public void sayHello() {
+        sayHello(this.mood);
+    }
+    
+    @Override
     public void sayHello(int mood)
     {
-        if(this.mood == Frog.moodHappy)
+        if(this.mood == Frog.MOODHAPPY)
             System.out.println("it will sing \"quack quack quack\" on the shore");
         else
-            if(this.mood == Dog.moodScare)
-                System.out.println("it will \"plop into the water\"");
+            System.out.println("it will \"plop into the water\"");
          
     }
 

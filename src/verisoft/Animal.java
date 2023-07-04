@@ -12,9 +12,9 @@ package verisoft;
 public abstract class Animal {
     private boolean mammalian;
     private boolean carnivorous;
-    public int mood;
-    public static int moodHappy = 1;
-    public static int moodScare = 2;
+    protected int mood;
+    public final static int MOODHAPPY = 1;
+    public final static int MOODSCARE = 2;
 
     public Animal(boolean mammalian, boolean carnivorous, int mood) {
         this.mammalian = mammalian;
@@ -38,15 +38,8 @@ public abstract class Animal {
         this.carnivorous = carnivorous;
     }
     
-    public void sayHello()
-    {
-        
-    }
-    
-    public void sayHello(int mood)
-    {
-        
-    }
+    abstract public void sayHello();// sayHello(int mood)פונקציה שמדפיסה את התנהגות החיה כשהיא מברכת אנשים ומפעילה את הפונקציה
+    abstract protected void sayHello(int mood);//פונקציה המדפיסה את התנהגות החיה לפי המשתנה mood
     
     
 }
